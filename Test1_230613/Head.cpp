@@ -15,16 +15,17 @@ Head::~Head()
     // Memory Leak
 }
 
-void Head::IsBodyCheck(Body* _Body)
+void Head::EatBodyCheck(Body& _Body, int4 _Pos)
 {
-    if (_Body->GetPos() == this->GetPos())
+    if (_Body.GetPos() == _Pos)
     {
-        //isBody = true;
-        _Body->SetPos(this->GetPos() + int4::Left);
+        isBody = true;
+        _Body.SetChar('B');
+        _Body.SetPos(_Pos + int4::Left);
     }
     else
     {
-        //isBody = false;
+        isBody = false;
     }
 }
 

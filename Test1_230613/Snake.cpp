@@ -15,9 +15,14 @@ int main()
     Body* body = ConsoleEngineCore::CreateObject<Body>();
 
 
-
     // 이 함수만은 무조건 존재해야 합니다.
     ConsoleEngineCore::EngineStart(int4{10, 5});
+
+    //while (true)
+    //{
+    //    head->EatBodyCheck(*body, head->GetPos());
+    //}
+
 
     // Memory Leak 제거
     ConsoleEngineCore::EngineEnd();

@@ -16,8 +16,8 @@ public:
 	Head& operator=(const Head& _Other) = delete;
 	Head& operator=(Head&& _Other) noexcept = delete;
 
-	void IsBodyCheck(Body* _Body);
-	//bool isBody = false;
+	void EatBodyCheck(Body& _Body, int4 _Pos);
+	bool isBody = false;
 
 	//void AddBody();
 
