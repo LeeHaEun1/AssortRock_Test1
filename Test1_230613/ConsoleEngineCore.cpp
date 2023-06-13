@@ -10,8 +10,21 @@ ConsoleEngineCore::ConsoleEngineCore()
 {
 }
 
+// Memory Leak
 ConsoleEngineCore::~ConsoleEngineCore() 
 {
+	std::list<ConsoleObject*>::iterator Start = Objects.begin();
+	std::list<ConsoleObject*>::iterator End = Objects.end();
+
+	for (; Start != End; ++Start)
+	{
+		ConsoleObject* Object = (*Start);
+		if (Object != nullptr)
+		{
+			delete Object;
+			Object = nullptr;
+		}
+	}
 }
 
 
