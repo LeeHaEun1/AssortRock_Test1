@@ -23,7 +23,6 @@ int main()
     //    head->EatBodyCheck(*body, head->GetPos());
     //}
 
-
     // Memory Leak 제거
     ConsoleEngineCore::EngineEnd();
 }
