@@ -1,6 +1,8 @@
 #include "Head.h"
 #include <conio.h>
 #include "ConsoleEngineCore.h"
+#include "Body.h"
+
 
 Head::Head() 
 {
@@ -13,7 +15,28 @@ Head::~Head()
     // Memory Leak
 }
 
-void Head::Tick(float _Time) 
+void Head::IsBodyCheck(Body* _Body)
+{
+    if (_Body->GetPos() == this->GetPos())
+    {
+        //isBody = true;
+        _Body->SetPos(this->GetPos() + int4::Left);
+    }
+    else
+    {
+        //isBody = false;
+    }
+}
+
+//void Head::AddBody(Body* _Body)
+//{
+//    if (isBody == true)
+//    {
+//        
+//    }
+//}
+
+void Head::Tick(float _Time)
 {
     char Select = (char)_getch();
 

@@ -10,11 +10,16 @@ int main()
 {
     _CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 
-    ConsoleEngineCore::CreateObject<Head>();
+    Head* head = ConsoleEngineCore::CreateObject<Head>();
 
-    ConsoleEngineCore::CreateObject<Body>();
+    Body* body = ConsoleEngineCore::CreateObject<Body>();
+
+    //ConsoleEngineCore::ob
+
 
 
     // 이 함수만은 무조건 존재해야 합니다.
     ConsoleEngineCore::EngineStart(int4{10, 5});
+
+    //head->IsBodyCheck(body);
 }

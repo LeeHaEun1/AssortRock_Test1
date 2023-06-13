@@ -3,7 +3,7 @@
 
 
 // Ό³Έν :
-class Body
+class Body : public Part
 {
 public:
 	// constrcuter destructer
@@ -15,6 +15,8 @@ public:
 	Body(Body&& _Other) noexcept = delete;
 	Body& operator=(const Body& _Other) = delete;
 	Body& operator=(Body&& _Other) noexcept = delete;
+
+	void FollowHead();
 
 protected:
 

@@ -33,6 +33,11 @@ public:
 
 	static ConsoleScreen Screen;
 
+	static std::list<ConsoleObject*> GetObjects() 
+	{
+		return Objects;
+	}
+
 protected:
 
 private:
