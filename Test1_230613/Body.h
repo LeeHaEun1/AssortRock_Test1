@@ -1,4 +1,6 @@
 #pragma once
+#include "Part.h"
+
 
 // Ό³Έν :
 class Body

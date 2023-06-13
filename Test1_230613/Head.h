@@ -19,6 +19,6 @@ protected:
 	void Tick(float _Time);
 
 private:
-
+	char lastSelect = '0';
 };
 

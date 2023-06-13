@@ -10,6 +10,7 @@ Head::Head()
 
 Head::~Head() 
 {
+    // Memory Leak
 }
 
 void Head::Tick(float _Time) 
@@ -39,5 +40,26 @@ void Head::Tick(float _Time)
         break;
     }
 
+    // 운동방향 반대 방향으로 이동 불가
+    if (lastSelect == 'a' && Select == 'd')
+    {
+        return;
+    }
+    if (lastSelect == 'd' && Select == 'a')
+    {
+        return;
+    }
+    if (lastSelect == 'w' && Select == 's')
+    {
+        return;
+    }
+    if (lastSelect == 's' && Select == 'w')
+    {
+        return;
+    }
+
     AddPos(MovePos);
+
+    // 마지막에 입력한 키 저장
+    lastSelect = Select;
 }

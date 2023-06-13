@@ -4,6 +4,7 @@
 #include <iostream>
 #include "ConsoleEngineCore.h"
 #include "Head.h"
+#include "Body.h"
 
 int main()
 {
@@ -11,7 +12,9 @@ int main()
 
     ConsoleEngineCore::CreateObject<Head>();
 
+    ConsoleEngineCore::CreateObject<Body>();
+
 
     // 이 함수만은 무조건 존재해야 합니다.
-    ConsoleEngineCore::EngineStart(int4{3, 3});
+    ConsoleEngineCore::EngineStart(int4{10, 5});
 }
