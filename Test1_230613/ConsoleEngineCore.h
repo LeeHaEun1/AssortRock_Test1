@@ -23,6 +23,9 @@ public:
 
 	static void EngineStart(const int4& Scale);
 
+	// Memory Leak 제거 위한 함수 추가
+	static void EngineEnd();
+
 	template<typename ObjectType>
 	static ObjectType* CreateObject() 
 	{
